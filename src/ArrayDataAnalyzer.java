@@ -34,11 +34,13 @@ public class ArrayDataAnalyzer {
         for (int num : numbers) {
             sum += num;
 
-            if (num > maximum)
+            if (num > maximum) {
                 maximum = num;
+            }
 
-            if (num < minimum)
+            if (num < minimum) {
                 minimum = num;
+            }
     }
 
         double average = (double) sum / numbers.length;
