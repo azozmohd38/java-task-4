@@ -496,7 +496,16 @@ public class BankTransactionManagementSystem {
                     System.out.println("2. Balance High -> Low");
                     System.out.println("3. Customer Name A-Z");
 
+                    while (!input.hasNextInt()) {
+                        System.out.println("Invalid Choice.");
+                        input.next();
+                    }
                     int sort = input.nextInt();
+
+                    if (sort < 1 || sort > 3) {
+                        System.out.println("Invalid Choice.");
+                        break;
+                    }
 
                     for (int i = 0; i < balances.size() - 1; i++) {
 
