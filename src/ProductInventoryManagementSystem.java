@@ -198,6 +198,11 @@ public class ProductInventoryManagementSystem {
         System.out.println("\n===== REMOVE PRODUCT =====");
 
         System.out.print("Enter Product Index: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid product index.");
+            input.next();
+            System.out.print("Enter Product Index: ");
+        }
         int removeIndex = input.nextInt();
 
         if (removeIndex >= 0 && removeIndex < productNames.size()) {
