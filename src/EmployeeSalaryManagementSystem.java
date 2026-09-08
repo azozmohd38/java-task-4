@@ -128,6 +128,11 @@ public class EmployeeSalaryManagementSystem {
         //  Update Employee Salary
         System.out.println("\n===== UPDATE EMPLOYEE SALARY =====");
         System.out.print("Enter Employee Index: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid employee index.");
+            input.next();
+            System.out.print("Enter Employee Index: ");
+        }
         int updateIndex = input.nextInt();
 
         if (updateIndex >= 0 && updateIndex < employeeSalaries.size()) {
