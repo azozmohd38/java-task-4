@@ -128,6 +128,11 @@ public class StudentManagementSystem {
     }
 
         System.out.print("Enter index to remove: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid index.");
+            input.next();
+            System.out.print("Enter index to remove: ");
+        }
         int removeIndex = input.nextInt();
 
         if (removeIndex >= 0 && removeIndex < students.size()) {
