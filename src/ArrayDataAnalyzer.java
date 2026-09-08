@@ -90,14 +90,14 @@ public class ArrayDataAnalyzer {
             input.next();
             System.out.print("Enter number to search: ");
         }
-        int search = input.nextInt();
+        int searchValue = input.nextInt();
 
         boolean found = false;
         int firstIndex = -1;
         int occurrences = 0;
 
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == search) {
+            if (numbers[i] == searchValue) {
                 if (!found) {
                     firstIndex = i;
                     found = true;
