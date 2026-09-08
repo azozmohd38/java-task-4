@@ -28,17 +28,17 @@ public class ArrayDataAnalyzer {
 
         //  Array Statistics
         int sum = 0;
-        int max = numbers[0];
-        int min = numbers[0];
+        int maximum = numbers[0];
+        int minimum = numbers[0];
 
         for (int num : numbers) {
             sum += num;
 
-            if (num > max)
-                max = num;
+            if (num > maximum)
+                maximum = num;
 
-            if (num < min)
-                min = num;
+            if (num < minimum)
+                minimum = num;
     }
 
         double average = (double) sum / numbers.length;
@@ -46,8 +46,8 @@ public class ArrayDataAnalyzer {
         System.out.println("\n===== ARRAY STATISTICS =====");
         System.out.println("Sum = " + sum);
         System.out.printf("Average = %.2f\n", average);
-        System.out.println("Maximum = " + max);
-        System.out.println("Minimum = " + min);
+        System.out.println("Maximum = " + maximum);
+        System.out.println("Minimum = " + minimum);
 
         //  Number Classification
         int positive = 0;
