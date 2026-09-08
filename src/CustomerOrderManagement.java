@@ -48,6 +48,12 @@ public class CustomerOrderManagement {
         System.out.print("Product Name: ");
         String product = input.nextLine().trim();
 
+        if (customer.isEmpty() || product.isEmpty()) {
+            System.out.println("Customer and product names cannot be empty.");
+            input.close();
+            return;
+        }
+
         System.out.print("Quantity: ");
         int qty = input.nextInt();
 
