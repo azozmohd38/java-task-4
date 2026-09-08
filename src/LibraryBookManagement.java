@@ -85,6 +85,11 @@ public class LibraryBookManagement {
         System.out.println("\n===== Update Book =====");
 
         System.out.print("Enter Book Index: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid book index.");
+            input.next();
+            System.out.print("Enter Book Index: ");
+        }
         int index = input.nextInt();
         input.nextLine(); // Clear buffer
 
