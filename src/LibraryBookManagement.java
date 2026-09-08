@@ -121,7 +121,7 @@ public class LibraryBookManagement {
 
         input.nextLine();
         System.out.print("Enter Book Title: ");
-        String searchTitle = input.nextLine();
+        String searchTitle = input.nextLine().trim();
 
         boolean found = false;
 
