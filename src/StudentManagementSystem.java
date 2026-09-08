@@ -49,8 +49,13 @@ public class StudentManagementSystem {
         String insertStudent = input.nextLine().trim();
 
         System.out.print("Enter position (0-" + students.size() + "): ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid position.");
+            input.next();
+            System.out.print("Enter position (0-" + students.size() + "): ");
+        }
         int position = input.nextInt();
-        input.nextLine(); // Clear buffer
+        input.nextLine();
 
         if (position >= 0 && position <= students.size()) {
             students.add(position, insertStudent);
