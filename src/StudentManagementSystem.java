@@ -119,7 +119,7 @@ public class StudentManagementSystem {
         System.out.println(students);
 
         System.out.print("Enter student name to remove: ");
-        String removeName = input.nextLine();
+        String removeName = input.nextLine().trim();
 
         if (students.remove(removeName)) {
             System.out.println("Student removed successfully.");
