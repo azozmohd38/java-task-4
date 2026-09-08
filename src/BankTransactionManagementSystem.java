@@ -99,6 +99,11 @@ public class BankTransactionManagementSystem {
             System.out.println("12. Exit");
             System.out.print("Enter Choice: ");
 
+            while (!input.hasNextInt()) {
+                System.out.println("Invalid Choice.");
+                input.next();
+                System.out.print("Enter Choice: ");
+            }
             choice = input.nextInt();
 
             switch (choice) {
