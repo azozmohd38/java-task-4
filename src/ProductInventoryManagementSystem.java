@@ -95,6 +95,11 @@ public class ProductInventoryManagementSystem {
         System.out.println("\n===== UPDATE PRODUCT =====");
 
         System.out.print("Enter Product Index: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid product index.");
+            input.next();
+            System.out.print("Enter Product Index: ");
+        }
         int index = input.nextInt();
         input.nextLine();
 
