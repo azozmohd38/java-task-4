@@ -73,6 +73,11 @@ public class StudentManagementSystem {
         System.out.println("\n===== UPDATE STUDENT =====");
 
         System.out.print("Enter student index: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid index.");
+            input.next();
+            System.out.print("Enter student index: ");
+        }
         int updateIndex = input.nextInt();
         input.nextLine();
 
