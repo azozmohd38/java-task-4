@@ -235,6 +235,11 @@ public class BankTransactionManagementSystem {
                     }
 
                     System.out.print("Withdrawal Amount: ");
+                    while (!input.hasNextDouble()) {
+                        System.out.println("Withdrawal amount must be a number.");
+                        input.next();
+                        System.out.print("Withdrawal Amount: ");
+                    }
                     double withdraw = input.nextDouble();
 
                     if (withdraw <= 0) {
