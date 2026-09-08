@@ -133,9 +133,18 @@ public class ScoreAnalysisSystem {
         if (updateIndex >= 0 && updateIndex < scores.size()) {
 
             System.out.print("Enter new score: ");
+            while (!input.hasNextInt()) {
+                System.out.println("Please enter a valid score.");
+                input.next();
+                System.out.print("Enter new score: ");
+            }
             int newScore = input.nextInt();
 
-            scores.set(updateIndex, newScore);
+            if (newScore < 0 || newScore > 100) {
+                System.out.println("Score must be between 0 and 100.");
+            } else {
+                scores.set(updateIndex, newScore);
+            }
 
             System.out.println("Updated Scores:");
             System.out.println(scores);
