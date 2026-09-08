@@ -16,8 +16,10 @@ public class ArrayDataAnalyzer {
         //  Display Array Information
         System.out.println("===== ARRAY INFORMATION =====");
         System.out.println("Total Elements: " + numbers.length);
-        System.out.println("First Element: " + numbers[0]);
-        System.out.println("Last Element: " + numbers[numbers.length - 1]);
+        int firstElement = numbers[0];
+        int lastElement = numbers[numbers.length - 1];
+        System.out.println("First Element: " + firstElement);
+        System.out.println("Last Element: " + lastElement);
 
         System.out.println("\nArray Elements:");
         for (int i = 0; i < numbers.length; i++) {
