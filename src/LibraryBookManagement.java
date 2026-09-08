@@ -91,7 +91,7 @@ public class LibraryBookManagement {
             System.out.print("Enter Book Index: ");
         }
         int index = input.nextInt();
-        input.nextLine(); // Clear buffer
+        input.nextLine();
 
         if (index >= 0 && index < bookTitles.size()) {
 
