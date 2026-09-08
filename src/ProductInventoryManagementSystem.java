@@ -80,11 +80,14 @@ public class ProductInventoryManagementSystem {
         double price = input.nextDouble();
         input.nextLine();
 
-        productNames.add(name);
-        productQuantities.add(quantity);
-        productPrices.add(price);
-
-        System.out.println("Product added successfully.");
+        if (name.isEmpty() || quantity < 0 || price < 0) {
+            System.out.println("Invalid product data.");
+        } else {
+            productNames.add(name);
+            productQuantities.add(quantity);
+            productPrices.add(price);
+            System.out.println("Product added successfully.");
+        }
 
         displayInventory(productNames, productQuantities, productPrices);
 
