@@ -235,6 +235,7 @@ public class EmployeeSalaryManagementSystem {
                 bonus = salary * 0.02;
             }
 
+            double bonusPercentage = salary >= 1000 ? 10 : (salary >= 500 ? 5 : 2);
             double finalSalary = salary + bonus;
 
             System.out.println("---------------------------");
