@@ -127,12 +127,13 @@ public class CustomerOrderManagement {
 
         for (String s : orderStatus) {
 
-            if (s.equalsIgnoreCase("Pending"))
+            if (s.equalsIgnoreCase("Pending")) {
                 pending++;
-            else if (s.equalsIgnoreCase("Completed"))
+            } else if (s.equalsIgnoreCase("Completed")) {
                 completed++;
-            else if (s.equalsIgnoreCase("Cancelled"))
+            } else if (s.equalsIgnoreCase("Cancelled")) {
                 cancelled++;
+            }
         }
 
         System.out.println("\n===== STATUS REPORT =====");
