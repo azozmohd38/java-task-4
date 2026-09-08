@@ -227,12 +227,13 @@ public class EmployeeSalaryManagementSystem {
             double salary = employeeSalaries.get(i);
             double bonus;
 
-            if (salary >= 1000)
+            if (salary >= 1000) {
                 bonus = salary * 0.10;
-            else if (salary >= 500)
+            } else if (salary >= 500) {
                 bonus = salary * 0.05;
-            else
+            } else {
                 bonus = salary * 0.02;
+            }
 
             double finalSalary = salary + bonus;
 
