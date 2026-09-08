@@ -152,7 +152,7 @@ public class ArrayDataAnalyzer {
         System.out.println();
 
         //  Sorting and Comparison
-        int[] sortedArray = Arrays.copyOf(originalArray, originalArray.length);
+        int[] sortedArray = Arrays.copyOf(numbers, numbers.length);
         Arrays.sort(sortedArray);
 
         System.out.println("\n===== SORTED ARRAY =====");
