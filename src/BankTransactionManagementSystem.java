@@ -449,7 +449,14 @@ public class BankTransactionManagementSystem {
                     }
 
                     System.out.print("New Status: ");
-                    accountStatus.set(update, input.nextLine());
+                    String updatedStatus = input.nextLine().trim();
+                    if (updatedStatus.equalsIgnoreCase("Active")
+                            || updatedStatus.equalsIgnoreCase("Suspended")
+                            || updatedStatus.equalsIgnoreCase("Closed")) {
+                        accountStatus.set(update, updatedStatus);
+                    } else {
+                        System.out.println("Invalid Account Status.");
+                    }
 
                     System.out.println("Updated Successfully.");
 
