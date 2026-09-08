@@ -208,6 +208,7 @@ public class ScoreAnalysisSystem {
         // Clear Score Data
         System.out.println("\n===== CLEAR SCORE DATA =====");
 
+        System.out.println("Scores Before Clear: " + scores.size());
         scores.clear();
 
         System.out.println("After Clear:");
