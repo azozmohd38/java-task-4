@@ -343,8 +343,8 @@ public class CustomerOrderManagement {
             System.out.println("Customer: " + customerNames.get(i));
             System.out.println("Product: " + productNames.get(i));
             System.out.println("Quantity: " + quantities.get(i));
-            System.out.println("Price: " + prices.get(i));
-            System.out.println("Total: " + total);
+            System.out.printf("Price: %.2f%n", prices.get(i));
+            System.out.printf("Total: %.2f%n", total);
             System.out.println("Status: " + orderStatus.get(i));
         }
     }
