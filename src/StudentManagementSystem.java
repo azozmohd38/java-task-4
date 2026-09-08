@@ -157,12 +157,12 @@ public class StudentManagementSystem {
     }
 
         // Sorting Students
-        ArrayList<String> sortedStudents = new ArrayList<>(originalStudents);
+        ArrayList<String> sortedStudents = new ArrayList<>(students);
         Collections.sort(sortedStudents);
 
         System.out.println("\n===== SORTED STUDENT LIST =====");
         System.out.println("Original List:");
-        System.out.println(originalStudents);
+        System.out.println(students);
 
         System.out.println("Sorted List:");
         System.out.println(sortedStudents);
