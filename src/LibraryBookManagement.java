@@ -69,11 +69,14 @@ public class LibraryBookManagement {
         System.out.print("Available (true/false): ");
         boolean newAvailability = input.nextBoolean();
 
-        bookTitles.add(newTitle);
-        authors.add(newAuthor);
-        availability.add(newAvailability);
-
-        System.out.println("Book added successfully.");
+        if (newTitle.isEmpty() || newAuthor.isEmpty()) {
+            System.out.println("Book title and author cannot be empty.");
+        } else {
+            bookTitles.add(newTitle);
+            authors.add(newAuthor);
+            availability.add(newAvailability);
+            System.out.println("Book added successfully.");
+        }
 
         System.out.println("\nUpdated Library:");
         displayBooks(bookTitles, authors, availability);
