@@ -38,8 +38,12 @@ public class StudentManagementSystem {
 
         System.out.print("Enter student name to add at the end: ");
         String newStudent = input.nextLine().trim();
-        students.add(newStudent);
-        System.out.println("Student added successfully.");
+        if (newStudent.isEmpty()) {
+            System.out.println("Student name cannot be empty.");
+        } else {
+            students.add(newStudent);
+            System.out.println("Student added successfully.");
+        }
 
         System.out.print("Enter student name to insert: ");
         String insertStudent = input.nextLine();
