@@ -197,7 +197,7 @@ public class EmployeeSalaryManagementSystem {
             indexes.add(i);
         }
 
-        Collections.sort(indexes, Comparator.comparing(employeeSalaries::get));
+        indexes.sort(Comparator.comparing(employeeSalaries::get));
 
         System.out.println("\nLowest to Highest:");
         for (int i : indexes) {
