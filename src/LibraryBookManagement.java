@@ -104,11 +104,14 @@ public class LibraryBookManagement {
             System.out.print("Available (true/false): ");
             boolean updatedAvailability = input.nextBoolean();
 
-            bookTitles.set(index, updatedTitle);
-            authors.set(index, updatedAuthor);
-            availability.set(index, updatedAvailability);
-
-            System.out.println("Book updated successfully.");
+            if (updatedTitle.isEmpty() || updatedAuthor.isEmpty()) {
+                System.out.println("Book title and author cannot be empty.");
+            } else {
+                bookTitles.set(index, updatedTitle);
+                authors.set(index, updatedAuthor);
+                availability.set(index, updatedAvailability);
+                System.out.println("Book updated successfully.");
+            }
         } else {
             System.out.println("Invalid book index.");
         }
