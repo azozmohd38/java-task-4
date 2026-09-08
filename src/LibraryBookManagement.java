@@ -99,7 +99,7 @@ public class LibraryBookManagement {
             String updatedTitle = input.nextLine().trim();
 
             System.out.print("New Author: ");
-            String updatedAuthor = input.nextLine();
+            String updatedAuthor = input.nextLine().trim();
 
             System.out.print("Available (true/false): ");
             boolean updatedAvailability = input.nextBoolean();
