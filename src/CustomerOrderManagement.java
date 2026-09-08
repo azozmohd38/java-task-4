@@ -213,7 +213,7 @@ public class CustomerOrderManagement {
             input.nextLine();
 
             System.out.print("New Status: ");
-            String st = input.nextLine();
+            String st = input.nextLine().trim();
 
             if (st.equalsIgnoreCase("Pending") ||
                     st.equalsIgnoreCase("Completed") ||
