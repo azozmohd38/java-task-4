@@ -151,7 +151,9 @@ public class EmployeeSalaryManagementSystem {
                 employeeSalaries.set(updateIndex, newSalary);
             }
 
-            System.out.println("Salary updated successfully.");
+            if (newSalary >= 0) {
+                System.out.println("Salary updated successfully.");
+            }
             System.out.println("Updated Employee:");
             System.out.println("ID: " + employeeIds.get(updateIndex));
             System.out.println("Name: " + employeeNames.get(updateIndex));
