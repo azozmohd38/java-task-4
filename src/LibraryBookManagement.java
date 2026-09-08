@@ -96,7 +96,7 @@ public class LibraryBookManagement {
         if (index >= 0 && index < bookTitles.size()) {
 
             System.out.print("New Title: ");
-            String updatedTitle = input.nextLine();
+            String updatedTitle = input.nextLine().trim();
 
             System.out.print("New Author: ");
             String updatedAuthor = input.nextLine();
