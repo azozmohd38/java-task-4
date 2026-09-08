@@ -47,7 +47,7 @@ public class ArrayDataAnalyzer {
 
         System.out.println("\n===== ARRAY STATISTICS =====");
         System.out.println("Sum = " + sum);
-        System.out.printf("Average = %.2f\n", average);
+        System.out.printf("Average = %.2f%n", average);
         System.out.println("Maximum = " + maximum);
         System.out.println("Minimum = " + minimum);
 
