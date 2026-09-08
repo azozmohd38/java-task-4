@@ -90,12 +90,13 @@ public class EmployeeSalaryManagementSystem {
 
         for (double salary : employeeSalaries) {
 
-            if (salary > 1000)
+            if (salary > 1000) {
                 high++;
-            else if (salary >= 500 && salary <= 1000)
+            } else if (salary >= 500 && salary <= 1000) {
                 medium++;
-            else
+            } else {
                 low++;
+            }
         }
 
         System.out.println("\n===== SALARY CATEGORY ANALYSIS =====");
