@@ -84,7 +84,7 @@ public class StudentManagementSystem {
         if (updateIndex >= 0 && updateIndex < students.size()) {
 
             System.out.print("Enter new student name: ");
-            String updatedName = input.nextLine();
+            String updatedName = input.nextLine().trim();
 
             students.set(updateIndex, updatedName);
 
