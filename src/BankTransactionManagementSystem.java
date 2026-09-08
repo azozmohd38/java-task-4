@@ -133,7 +133,7 @@ public class BankTransactionManagementSystem {
                     input.nextLine();
 
                     System.out.print("Customer Name: ");
-                    String name = input.nextLine();
+                    String name = input.nextLine().trim();
 
                     System.out.print("Initial Balance: ");
                     double balance = input.nextDouble();
