@@ -339,7 +339,7 @@ public class BankTransactionManagementSystem {
                         input.nextLine();
 
                         System.out.print("Customer Name: ");
-                        String searchName = input.nextLine();
+                        String searchName = input.nextLine().trim();
 
                         boolean found = false;
 
