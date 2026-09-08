@@ -107,6 +107,11 @@ public class EmployeeSalaryManagementSystem {
         // 5. Search Employee
         System.out.println("\n===== SEARCH EMPLOYEE =====");
         System.out.print("Enter Employee ID: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Employee ID must be a number.");
+            input.next();
+            System.out.print("Enter Employee ID: ");
+        }
         int searchId = input.nextInt();
 
         int position = employeeIds.indexOf(searchId);
