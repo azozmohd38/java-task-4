@@ -57,7 +57,9 @@ public class StudentManagementSystem {
         int position = input.nextInt();
         input.nextLine();
 
-        if (position >= 0 && position <= students.size()) {
+        if (insertStudent.isEmpty()) {
+            System.out.println("Student name cannot be empty.");
+        } else if (position >= 0 && position <= students.size()) {
             students.add(position, insertStudent);
             System.out.println("Student inserted successfully.");
     } else {
