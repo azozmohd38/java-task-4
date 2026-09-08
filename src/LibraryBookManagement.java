@@ -145,6 +145,7 @@ public class LibraryBookManagement {
             System.out.println("Book not found.");
         }
 
+        System.out.println("Library book management completed.");
         input.close();
     }
 
