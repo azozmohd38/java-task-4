@@ -135,6 +135,11 @@ public class BankTransactionManagementSystem {
                     System.out.print("Customer Name: ");
                     String name = input.nextLine().trim();
 
+                    if (name.isEmpty()) {
+                        System.out.println("Customer name cannot be empty.");
+                        break;
+                    }
+
                     System.out.print("Initial Balance: ");
                     double balance = input.nextDouble();
 
