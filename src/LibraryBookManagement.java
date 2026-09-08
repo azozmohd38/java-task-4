@@ -64,7 +64,7 @@ public class LibraryBookManagement {
         String newTitle = input.nextLine().trim();
 
         System.out.print("Enter Author: ");
-        String newAuthor = input.nextLine();
+        String newAuthor = input.nextLine().trim();
 
         System.out.print("Available (true/false): ");
         boolean newAvailability = input.nextBoolean();
