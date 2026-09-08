@@ -151,7 +151,7 @@ public class BankTransactionManagementSystem {
                     input.nextLine();
 
                     System.out.print("Account Type (Savings/Current): ");
-                    String type = input.nextLine();
+                    String type = input.nextLine().trim();
 
                     if (!type.equalsIgnoreCase("Savings") &&
                             !type.equalsIgnoreCase("Current")) {
