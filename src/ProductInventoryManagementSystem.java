@@ -64,6 +64,11 @@ public class ProductInventoryManagementSystem {
         String name = input.nextLine().trim();
 
         System.out.print("Enter Quantity: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Quantity must be a number.");
+            input.next();
+            System.out.print("Enter Quantity: ");
+        }
         int quantity = input.nextInt();
 
         System.out.print("Enter Price: ");
