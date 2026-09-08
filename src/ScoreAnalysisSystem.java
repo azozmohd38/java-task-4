@@ -27,9 +27,6 @@ public class ScoreAnalysisSystem {
         scores.add(95);
         scores.add(73);
 
-        // Keep a copy of the original list
-        ArrayList<Integer> originalScores = new ArrayList<>(scores);
-
         // Display Score Information
         System.out.println("===== SCORE INFORMATION =====");
         System.out.println("Total Scores: " + scores.size());
