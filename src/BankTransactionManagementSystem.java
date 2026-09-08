@@ -383,10 +383,10 @@ public class BankTransactionManagementSystem {
                     double average = total / (double) balances.size();
 
                     System.out.println("Total Accounts : " + balances.size());
-                    System.out.println("Total Balance  : " + total);
-                    System.out.println("Average Balance: " + average);
-                    System.out.println("Highest Balance: " + highest);
-                    System.out.println("Lowest Balance : " + lowest);
+                    System.out.printf("Total Balance  : %.2f%n", total);
+                    System.out.printf("Average Balance: %.2f%n", average);
+                    System.out.printf("Highest Balance: %.2f%n", highest);
+                    System.out.printf("Lowest Balance : %.2f%n", lowest);
 
                     break;
 
