@@ -193,7 +193,7 @@ public class CustomerOrderManagement {
             input.nextLine();
 
             System.out.print("New Customer: ");
-            customerNames.set(index, input.nextLine());
+            customerNames.set(index, input.nextLine().trim());
 
             System.out.print("New Product: ");
             productNames.set(index, input.nextLine());
