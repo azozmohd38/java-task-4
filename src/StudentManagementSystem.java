@@ -103,7 +103,7 @@ public class StudentManagementSystem {
         System.out.println("\n===== SEARCH STUDENT =====");
 
         System.out.print("Enter student name to search: ");
-        String searchName = input.nextLine();
+        String searchName = input.nextLine().trim();
 
         if (students.contains(searchName)) {
             System.out.println("Student found.");
