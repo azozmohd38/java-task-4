@@ -61,7 +61,7 @@ public class ProductInventoryManagementSystem {
         System.out.println("\n===== ADD NEW PRODUCT =====");
 
         System.out.print("Enter Product Name: ");
-        String name = input.nextLine();
+        String name = input.nextLine().trim();
 
         System.out.print("Enter Quantity: ");
         int quantity = input.nextInt();
