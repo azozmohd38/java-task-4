@@ -187,6 +187,7 @@ public class ScoreAnalysisSystem {
 
         System.out.println("Updated Scores:");
         System.out.println(scores);
+        System.out.println("Remaining Scores: " + scores.size());
 
         //  Sorting and Reversing Scores
         ArrayList<Integer> sortedScores = new ArrayList<>(scores);
