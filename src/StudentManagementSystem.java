@@ -46,7 +46,7 @@ public class StudentManagementSystem {
         }
 
         System.out.print("Enter student name to insert: ");
-        String insertStudent = input.nextLine();
+        String insertStudent = input.nextLine().trim();
 
         System.out.print("Enter position (0-" + students.size() + "): ");
         int position = input.nextInt();
