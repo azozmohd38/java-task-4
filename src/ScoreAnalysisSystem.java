@@ -95,6 +95,11 @@ public class ScoreAnalysisSystem {
         //  Search Score System
         System.out.println("\n===== SEARCH SCORE =====");
         System.out.print("Enter score to search: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Please enter a valid score.");
+            input.next();
+            System.out.print("Enter score to search: ");
+        }
         int searchScore = input.nextInt();
 
         if (scores.contains(searchScore)) {
