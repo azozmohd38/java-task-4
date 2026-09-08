@@ -115,11 +115,14 @@ public class ProductInventoryManagementSystem {
             double newPrice = input.nextDouble();
             input.nextLine();
 
-            productNames.set(index, newName);
-            productQuantities.set(index, newQuantity);
-            productPrices.set(index, newPrice);
-
-            System.out.println("Product updated successfully.");
+            if (newName.isEmpty() || newQuantity < 0 || newPrice < 0) {
+                System.out.println("Invalid product data.");
+            } else {
+                productNames.set(index, newName);
+                productQuantities.set(index, newQuantity);
+                productPrices.set(index, newPrice);
+                System.out.println("Product updated successfully.");
+            }
 
         } else {
             System.out.println("Invalid product index.");
