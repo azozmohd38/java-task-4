@@ -123,6 +123,11 @@ public class ScoreAnalysisSystem {
         //  Update Score System
         System.out.println("\n===== UPDATE SCORE =====");
         System.out.print("Enter score index: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid index.");
+            input.next();
+            System.out.print("Enter score index: ");
+        }
         int updateIndex = input.nextInt();
 
         if (updateIndex >= 0 && updateIndex < scores.size()) {
