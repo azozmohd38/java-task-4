@@ -46,7 +46,7 @@ public class CustomerOrderManagement {
         String customer = input.nextLine().trim();
 
         System.out.print("Product Name: ");
-        String product = input.nextLine();
+        String product = input.nextLine().trim();
 
         System.out.print("Quantity: ");
         int qty = input.nextInt();
