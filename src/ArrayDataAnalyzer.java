@@ -60,17 +60,19 @@ public class ArrayDataAnalyzer {
 
         for (int num : numbers) {
 
-            if (num > 0)
+            if (num > 0) {
                 positive++;
-            else if (num < 0)
+            } else if (num < 0) {
                 negative++;
-            else
+            } else {
                 zeros++;
+            }
 
-            if (num % 2 == 0)
+            if (num % 2 == 0) {
                 even++;
-            else
+            } else {
                 odd++;
+            }
     }
 
         System.out.println("\n===== NUMBER CLASSIFICATION =====");
