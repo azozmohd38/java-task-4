@@ -138,9 +138,18 @@ public class EmployeeSalaryManagementSystem {
         if (updateIndex >= 0 && updateIndex < employeeSalaries.size()) {
 
             System.out.print("Enter New Salary: ");
+            while (!input.hasNextDouble()) {
+                System.out.println("Salary must be a number.");
+                input.next();
+                System.out.print("Enter New Salary: ");
+            }
             double newSalary = input.nextDouble();
 
-            employeeSalaries.set(updateIndex, newSalary);
+            if (newSalary < 0) {
+                System.out.println("Salary cannot be negative.");
+            } else {
+                employeeSalaries.set(updateIndex, newSalary);
+            }
 
             System.out.println("Salary updated successfully.");
             System.out.println("Updated Employee:");
