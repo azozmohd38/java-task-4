@@ -71,16 +71,19 @@ public class ScoreAnalysisSystem {
 
         for (int score : scores) {
 
-            if (score >= 60)
+            if (score >= 60) {
                 passed++;
-            else
+            } else {
                 failed++;
+            }
 
-            if (score >= 90)
+            if (score >= 90) {
                 excellent++;
+            }
 
-            if (score < 50)
+            if (score < 50) {
                 lowGrades++;
+            }
     }
 
         System.out.println("\n===== SCORE CLASSIFICATION =====");
