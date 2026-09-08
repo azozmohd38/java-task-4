@@ -61,7 +61,6 @@ public class LibraryBookManagement {
         System.out.println("\n===== Add New Book =====");
 
         System.out.print("Enter Book Title: ");
-        input.nextLine(); // Clear buffer
         String newTitle = input.nextLine();
 
         System.out.print("Enter Author: ");
