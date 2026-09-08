@@ -241,6 +241,7 @@ public class EmployeeSalaryManagementSystem {
             System.out.println("---------------------------");
             System.out.println("Employee: " + employeeNames.get(i));
             System.out.printf("Current Salary: %.2f%n", salary);
+            System.out.printf("Bonus Rate: %.0f%%%n", bonusPercentage);
             System.out.printf("Bonus: %.2f%n", bonus);
             System.out.printf("Final Salary: %.2f%n", finalSalary);
         }
