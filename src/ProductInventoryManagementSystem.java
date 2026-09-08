@@ -136,7 +136,13 @@ public class ProductInventoryManagementSystem {
         System.out.print("Enter Product Name: ");
         String search = input.nextLine().trim();
 
-        int searchIndex = productNames.indexOf(search);
+        int searchIndex = -1;
+        for (int i = 0; i < productNames.size(); i++) {
+            if (productNames.get(i).equalsIgnoreCase(search)) {
+                searchIndex = i;
+                break;
+            }
+        }
 
         if (searchIndex != -1) {
 
