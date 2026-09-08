@@ -192,7 +192,7 @@ public class ScoreAnalysisSystem {
         System.out.println(scores);
 
         //  Sorting and Reversing Scores
-        ArrayList<Integer> sortedScores = new ArrayList<>(originalScores);
+        ArrayList<Integer> sortedScores = new ArrayList<>(scores);
 
         Collections.sort(sortedScores);
 
