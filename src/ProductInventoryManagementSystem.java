@@ -223,7 +223,7 @@ public class ProductInventoryManagementSystem {
         System.out.println("\n===== SORT BY NAME =====");
 
         ArrayList<String> sortedNames = new ArrayList<>(productNames);
-        Collections.sort(sortedNames);
+        sortedNames.sort(String.CASE_INSENSITIVE_ORDER);
 
         for (String product : sortedNames) {
             int i = productNames.indexOf(product);
