@@ -65,11 +65,13 @@ public class EmployeeSalaryManagementSystem {
         for (double salary : employeeSalaries) {
             totalSalary += salary;
 
-            if (salary > highestSalary)
+            if (salary > highestSalary) {
                 highestSalary = salary;
+            }
 
-            if (salary < lowestSalary)
+            if (salary < lowestSalary) {
                 lowestSalary = salary;
+            }
         }
 
         double averageSalary = (double) totalSalary / employeeSalaries.size();
