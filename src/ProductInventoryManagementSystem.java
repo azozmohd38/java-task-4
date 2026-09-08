@@ -1,237 +1,234 @@
-
-
-    import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
+public class ProductInventoryManagementSystem {
 
-    public class ProductInventoryManagementSystem {
+    public static void main(String[] args) {
 
-        public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-            Scanner input = new Scanner(System.in);
+        //  Create Product Lists
+        ArrayList<String> productNames = new ArrayList<>();
+        ArrayList<Integer> productQuantities = new ArrayList<>();
+        ArrayList<Double> productPrices = new ArrayList<>();
 
-            //  Create Product Lists
-            ArrayList<String> productNames = new ArrayList<>();
-            ArrayList<Integer> productQuantities = new ArrayList<>();
-            ArrayList<Double> productPrices = new ArrayList<>();
+        productNames.add("Laptop");
+        productQuantities.add(5);
+        productPrices.add(750.50);
 
-            productNames.add("Laptop");
-            productQuantities.add(5);
-            productPrices.add(750.50);
+        productNames.add("Mouse");
+        productQuantities.add(20);
+        productPrices.add(15.50);
 
-            productNames.add("Mouse");
-            productQuantities.add(20);
-            productPrices.add(15.50);
+        productNames.add("Keyboard");
+        productQuantities.add(10);
+        productPrices.add(30.00);
 
-            productNames.add("Keyboard");
-            productQuantities.add(10);
-            productPrices.add(30.00);
+        productNames.add("Monitor");
+        productQuantities.add(8);
+        productPrices.add(180.75);
 
-            productNames.add("Monitor");
-            productQuantities.add(8);
-            productPrices.add(180.75);
+        productNames.add("Printer");
+        productQuantities.add(0);
+        productPrices.add(250.00);
 
-            productNames.add("Printer");
-            productQuantities.add(0);
-            productPrices.add(250.00);
+        productNames.add("Speaker");
+        productQuantities.add(6);
+        productPrices.add(55.25);
 
-            productNames.add("Speaker");
-            productQuantities.add(6);
-            productPrices.add(55.25);
+        productNames.add("USB Drive");
+        productQuantities.add(25);
+        productPrices.add(12.99);
 
-            productNames.add("USB Drive");
-            productQuantities.add(25);
-            productPrices.add(12.99);
+        productNames.add("Webcam");
+        productQuantities.add(3);
+        productPrices.add(45.00);
 
-            productNames.add("Webcam");
-            productQuantities.add(3);
-            productPrices.add(45.00);
+        productNames.add("Headphones");
+        productQuantities.add(15);
+        productPrices.add(85.50);
 
-            productNames.add("Headphones");
-            productQuantities.add(15);
-            productPrices.add(85.50);
+        productNames.add("Router");
+        productQuantities.add(4);
+        productPrices.add(95.99);
 
-            productNames.add("Router");
-            productQuantities.add(4);
-            productPrices.add(95.99);
+        // 2. Display Inventory
+        System.out.println("===== PRODUCT INVENTORY =====");
+        displayInventory(productNames, productQuantities, productPrices);
 
-            // 2. Display Inventory
-            System.out.println("===== PRODUCT INVENTORY =====");
-            displayInventory(productNames, productQuantities, productPrices);
+        // 3. Add New Product
+        System.out.println("\n===== ADD NEW PRODUCT =====");
 
-            // 3. Add New Product
-            System.out.println("\n===== ADD NEW PRODUCT =====");
+        System.out.print("Enter Product Name: ");
+        String name = input.nextLine();
 
-            System.out.print("Enter Product Name: ");
-            String name = input.nextLine();
+        System.out.print("Enter Quantity: ");
+        int quantity = input.nextInt();
 
-            System.out.print("Enter Quantity: ");
-            int quantity = input.nextInt();
+        System.out.print("Enter Price: ");
+        double price = input.nextDouble();
+        input.nextLine();
 
-            System.out.print("Enter Price: ");
-            double price = input.nextDouble();
+        productNames.add(name);
+        productQuantities.add(quantity);
+        productPrices.add(price);
+
+        System.out.println("Product added successfully.");
+
+        displayInventory(productNames, productQuantities, productPrices);
+
+        // 4. Update Product Information
+        System.out.println("\n===== UPDATE PRODUCT =====");
+
+        System.out.print("Enter Product Index: ");
+        int index = input.nextInt();
+        input.nextLine();
+
+        if (index >= 0 && index < productNames.size()) {
+
+            System.out.print("New Product Name: ");
+            String newName = input.nextLine();
+
+            System.out.print("New Quantity: ");
+            int newQuantity = input.nextInt();
+
+            System.out.print("New Price: ");
+            double newPrice = input.nextDouble();
             input.nextLine();
 
-            productNames.add(name);
-            productQuantities.add(quantity);
-            productPrices.add(price);
+            productNames.set(index, newName);
+            productQuantities.set(index, newQuantity);
+            productPrices.set(index, newPrice);
 
-            System.out.println("Product added successfully.");
+            System.out.println("Product updated successfully.");
 
-            displayInventory(productNames, productQuantities, productPrices);
+        } else {
+            System.out.println("Invalid product index.");
+        }
 
-            // 4. Update Product Information
-            System.out.println("\n===== UPDATE PRODUCT =====");
+        displayInventory(productNames, productQuantities, productPrices);
 
-            System.out.print("Enter Product Index: ");
-            int index = input.nextInt();
-            input.nextLine();
+        //  Search Product System
+        System.out.println("\n===== SEARCH PRODUCT =====");
 
-            if (index >= 0 && index < productNames.size()) {
+        System.out.print("Enter Product Name: ");
+        String search = input.nextLine();
 
-                System.out.print("New Product Name: ");
-                String newName = input.nextLine();
+        int searchIndex = productNames.indexOf(search);
 
-                System.out.print("New Quantity: ");
-                int newQuantity = input.nextInt();
+        if (searchIndex != -1) {
 
-                System.out.print("New Price: ");
-                double newPrice = input.nextDouble();
-                input.nextLine();
+            System.out.println("Product Found!");
+            System.out.println("Index: " + searchIndex);
+            System.out.println("Quantity: " + productQuantities.get(searchIndex));
+            System.out.println("Price: $" + productPrices.get(searchIndex));
 
-                productNames.set(index, newName);
-                productQuantities.set(index, newQuantity);
-                productPrices.set(index, newPrice);
+        } else {
+            System.out.println("Product not found.");
+        }
 
-                System.out.println("Product updated successfully.");
+        //  Stock Analysis
+        System.out.println("\n===== STOCK ANALYSIS =====");
 
-            } else {
-                System.out.println("Invalid product index.");
+        int totalQuantity = 0;
+        double totalValue = 0;
+
+        for (int i = 0; i < productNames.size(); i++) {
+            totalQuantity += productQuantities.get(i);
+            totalValue += productQuantities.get(i) * productPrices.get(i);
+        }
+
+        System.out.println("Total Products: " + productNames.size());
+        System.out.println("Total Quantity: " + totalQuantity);
+        System.out.printf("Inventory Value: $%.2f%n", totalValue);
+
+        //  Stock Status Checking
+        System.out.println("\n===== STOCK STATUS =====");
+
+        System.out.println("Low Stock (Quantity < 5):");
+        for (int i = 0; i < productNames.size(); i++) {
+            if (productQuantities.get(i) < 5 && productQuantities.get(i) > 0) {
+                System.out.println(productNames.get(i));
             }
+        }
 
-            displayInventory(productNames, productQuantities, productPrices);
-
-            //  Search Product System
-            System.out.println("\n===== SEARCH PRODUCT =====");
-
-            System.out.print("Enter Product Name: ");
-            String search = input.nextLine();
-
-            int searchIndex = productNames.indexOf(search);
-
-            if (searchIndex != -1) {
-
-                System.out.println("Product Found!");
-                System.out.println("Index: " + searchIndex);
-                System.out.println("Quantity: " + productQuantities.get(searchIndex));
-                System.out.println("Price: $" + productPrices.get(searchIndex));
-
-            } else {
-                System.out.println("Product not found.");
+        System.out.println("\nOut of Stock:");
+        for (int i = 0; i < productNames.size(); i++) {
+            if (productQuantities.get(i) == 0) {
+                System.out.println(productNames.get(i));
             }
+        }
 
-            //  Stock Analysis
-            System.out.println("\n===== STOCK ANALYSIS =====");
-
-            int totalQuantity = 0;
-            double totalValue = 0;
-
-            for (int i = 0; i < productNames.size(); i++) {
-                totalQuantity += productQuantities.get(i);
-                totalValue += productQuantities.get(i) * productPrices.get(i);
+        System.out.println("\nAvailable Stock:");
+        for (int i = 0; i < productNames.size(); i++) {
+            if (productQuantities.get(i) > 0) {
+                System.out.println(productNames.get(i));
             }
+        }
 
-            System.out.println("Total Products: " + productNames.size());
-            System.out.println("Total Quantity: " + totalQuantity);
-            System.out.printf("Inventory Value: $%.2f%n", totalValue);
+        //  Remove Product
+        System.out.println("\n===== REMOVE PRODUCT =====");
 
-            //  Stock Status Checking
-            System.out.println("\n===== STOCK STATUS =====");
+        System.out.print("Enter Product Index: ");
+        int removeIndex = input.nextInt();
 
-            System.out.println("Low Stock (Quantity < 5):");
-            for (int i = 0; i < productNames.size(); i++) {
-                if (productQuantities.get(i) < 5 && productQuantities.get(i) > 0) {
-                    System.out.println(productNames.get(i));
-                }
-            }
+        if (removeIndex >= 0 && removeIndex < productNames.size()) {
 
-            System.out.println("\nOut of Stock:");
-            for (int i = 0; i < productNames.size(); i++) {
-                if (productQuantities.get(i) == 0) {
-                    System.out.println(productNames.get(i));
-                }
-            }
+            productNames.remove(removeIndex);
+            productQuantities.remove(removeIndex);
+            productPrices.remove(removeIndex);
 
-            System.out.println("\nAvailable Stock:");
-            for (int i = 0; i < productNames.size(); i++) {
-                if (productQuantities.get(i) > 0) {
-                    System.out.println(productNames.get(i));
-                }
-            }
+            System.out.println("Product removed successfully.");
 
-            //  Remove Product
-            System.out.println("\n===== REMOVE PRODUCT =====");
+        } else {
+            System.out.println("Invalid product index.");
+        }
 
-            System.out.print("Enter Product Index: ");
-            int removeIndex = input.nextInt();
+        displayInventory(productNames, productQuantities, productPrices);
 
-            if (removeIndex >= 0 && removeIndex < productNames.size()) {
+        //  Sorting Products
+        System.out.println("\n===== SORT BY NAME =====");
 
-                productNames.remove(removeIndex);
-                productQuantities.remove(removeIndex);
-                productPrices.remove(removeIndex);
+        ArrayList<String> sortedNames = new ArrayList<>(productNames);
+        Collections.sort(sortedNames);
 
-                System.out.println("Product removed successfully.");
+        for (String product : sortedNames) {
+            int i = productNames.indexOf(product);
+            System.out.println(product + " | Qty: " + productQuantities.get(i)
+                    + " | Price: $" + productPrices.get(i));
+        }
 
-            } else {
-                System.out.println("Invalid product index.");
-            }
+        System.out.println("\n===== SORT BY PRICE =====");
 
-            displayInventory(productNames, productQuantities, productPrices);
+        ArrayList<Integer> indexes = new ArrayList<>();
 
-            //  Sorting Products
-            System.out.println("\n===== SORT BY NAME =====");
+        for (int i = 0; i < productNames.size(); i++) {
+            indexes.add(i);
+        }
 
-            ArrayList<String> sortedNames = new ArrayList<>(productNames);
-            Collections.sort(sortedNames);
+        Collections.sort(indexes, Comparator.comparing(productPrices::get));
 
-            for (String product : sortedNames) {
-                int i = productNames.indexOf(product);
-                System.out.println(product + " | Qty: " + productQuantities.get(i)
-                        + " | Price: $" + productPrices.get(i));
-            }
+        for (int i : indexes) {
+            System.out.println(productNames.get(i) + " | Qty: "
+                    + productQuantities.get(i) + " | Price: $"
+                    + productPrices.get(i));
+        }
 
-            System.out.println("\n===== SORT BY PRICE =====");
-
-            ArrayList<Integer> indexes = new ArrayList<>();
-
-            for (int i = 0; i < productNames.size(); i++) {
-                indexes.add(i);
-            }
-
-            Collections.sort(indexes, Comparator.comparing(productPrices::get));
-
-            for (int i : indexes) {
-                System.out.println(productNames.get(i) + " | Qty: "
-                        + productQuantities.get(i) + " | Price: $"
-                        + productPrices.get(i));
-            }
-
-            input.close();
+        input.close();
         }
 
         // Method to Display Inventory
         public static void displayInventory(ArrayList<String> names,
-                                            ArrayList<Integer> quantities,
-                                            ArrayList<Double> prices) {
+                                        ArrayList<Integer> quantities,
+                                        ArrayList<Double> prices) {
 
-            for (int i = 0; i < names.size(); i++) {
+        for (int i = 0; i < names.size(); i++) {
 
-                System.out.println("\nProduct " + i);
-                System.out.println("Name: " + names.get(i));
-                System.out.println("Quantity: " + quantities.get(i));
-                System.out.printf("Price: $%.2f%n", prices.get(i));
-            }
+            System.out.println("\nProduct " + i);
+            System.out.println("Name: " + names.get(i));
+            System.out.println("Quantity: " + quantities.get(i));
+            System.out.printf("Price: $%.2f%n", prices.get(i));
+        }
         }
     }
