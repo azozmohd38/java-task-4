@@ -422,6 +422,11 @@ public class BankTransactionManagementSystem {
                 case 9:
 
                     System.out.print("Enter Account Index: ");
+                    while (!input.hasNextInt()) {
+                        System.out.println("Invalid Index.");
+                        input.next();
+                        System.out.print("Enter Account Index: ");
+                    }
                     int update = input.nextInt();
 
                     if (update < 0 || update >= accountNumbers.size()) {
