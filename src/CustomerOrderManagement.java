@@ -250,9 +250,9 @@ public class CustomerOrderManagement {
             double discountAmount = total * discount;
             double finalPrice = total - discountAmount;
 
-            System.out.println("Original Price: " + total);
-            System.out.println("Discount Amount: " + discountAmount);
-            System.out.println("Final Price: " + finalPrice);
+            System.out.printf("Original Price: %.2f%n", total);
+            System.out.printf("Discount Amount: %.2f%n", discountAmount);
+            System.out.printf("Final Price: %.2f%n", finalPrice);
         }
 
         // ================= Remove =================
