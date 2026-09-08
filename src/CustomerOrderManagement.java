@@ -179,8 +179,9 @@ public class CustomerOrderManagement {
             }
         }
 
-        if (!found)
+        if (!found) {
             System.out.println("Order not found.");
+        }
 
         // ================= Update =================
         System.out.println("\n===== UPDATE ORDER =====");
