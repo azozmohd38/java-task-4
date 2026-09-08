@@ -117,10 +117,10 @@ public class CustomerOrderManagement {
 
         System.out.println("\n===== ORDER REPORT =====");
         System.out.println("Total Orders: " + orderIds.size());
-        System.out.println("Total Sales: " + totalSales);
-        System.out.println("Average Order: " + average);
-        System.out.println("Highest Order: " + highest);
-        System.out.println("Lowest Order: " + lowest);
+        System.out.printf("Total Sales: %.2f%n", totalSales);
+        System.out.printf("Average Order: %.2f%n", average);
+        System.out.printf("Highest Order: %.2f%n", highest);
+        System.out.printf("Lowest Order: %.2f%n", lowest);
 
         //  Status Analysis
         int pending = 0, completed = 0, cancelled = 0;
