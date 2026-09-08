@@ -194,6 +194,11 @@ public class BankTransactionManagementSystem {
                     }
 
                     System.out.print("Deposit Amount: ");
+                    while (!input.hasNextDouble()) {
+                        System.out.println("Deposit amount must be a number.");
+                        input.next();
+                        System.out.print("Deposit Amount: ");
+                    }
                     double deposit = input.nextDouble();
 
                     if (deposit <= 0) {
