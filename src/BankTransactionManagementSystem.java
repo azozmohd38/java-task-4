@@ -539,7 +539,7 @@ public class BankTransactionManagementSystem {
                     break;
 
                 case 12:
-                    System.out.println("Thank You.");
+                    System.out.println("Bank transaction management completed.");
                     break;
 
                 default:
