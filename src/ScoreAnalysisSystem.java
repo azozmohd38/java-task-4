@@ -160,6 +160,11 @@ public class ScoreAnalysisSystem {
         System.out.println(scores);
 
         System.out.print("Enter score value to remove: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Please enter a valid score.");
+            input.next();
+            System.out.print("Enter score value to remove: ");
+        }
         int removeValue = input.nextInt();
 
         if (scores.remove(Integer.valueOf(removeValue))) {
