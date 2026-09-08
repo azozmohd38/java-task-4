@@ -164,6 +164,7 @@ public class ArrayDataAnalyzer {
         System.out.println("\nComparison:");
         System.out.println("Smallest Value: " + sortedArray[0]);
         System.out.println("Largest Value: " + sortedArray[sortedArray.length - 1]);
+        System.out.println("Array analysis completed.");
 
         input.close();
     }
