@@ -86,7 +86,11 @@ public class StudentManagementSystem {
             System.out.print("Enter new student name: ");
             String updatedName = input.nextLine().trim();
 
-            students.set(updateIndex, updatedName);
+            if (updatedName.isEmpty()) {
+                System.out.println("Student name cannot be empty.");
+            } else {
+                students.set(updateIndex, updatedName);
+            }
 
             System.out.println("Updated Student List:");
             System.out.println(students);
