@@ -166,6 +166,11 @@ public class EmployeeSalaryManagementSystem {
         //  Remove Employee
         System.out.println("\n===== REMOVE EMPLOYEE =====");
         System.out.print("Enter Employee Index: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid employee index.");
+            input.next();
+            System.out.print("Enter Employee Index: ");
+        }
         int removeIndex = input.nextInt();
 
         if (removeIndex >= 0 && removeIndex < employeeNames.size()) {
