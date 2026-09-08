@@ -119,7 +119,7 @@ public class LibraryBookManagement {
         //  Search Book
         System.out.println("\n===== Search Book =====");
 
-        input.nextLine(); // Clear buffer
+        input.nextLine();
         System.out.print("Enter Book Title: ");
         String searchTitle = input.nextLine();
 
