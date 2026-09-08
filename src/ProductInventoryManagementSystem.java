@@ -106,7 +106,7 @@ public class ProductInventoryManagementSystem {
         if (index >= 0 && index < productNames.size()) {
 
             System.out.print("New Product Name: ");
-            String newName = input.nextLine();
+            String newName = input.nextLine().trim();
 
             System.out.print("New Quantity: ");
             int newQuantity = input.nextInt();
