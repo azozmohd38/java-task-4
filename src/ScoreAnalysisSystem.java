@@ -215,6 +215,7 @@ public class ScoreAnalysisSystem {
         System.out.println(scores);
 
         System.out.println("Is Empty: " + scores.isEmpty());
+        System.out.println("Score analysis completed.");
 
         input.close();
     }
