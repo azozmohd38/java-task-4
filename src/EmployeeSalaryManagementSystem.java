@@ -246,6 +246,7 @@ public class EmployeeSalaryManagementSystem {
             System.out.printf("Final Salary: %.2f%n", finalSalary);
         }
 
+        System.out.println("Employee salary management completed.");
         input.close();
         }
 
