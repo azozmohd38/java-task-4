@@ -43,7 +43,7 @@ public class CustomerOrderManagement {
         input.nextLine();
 
         System.out.print("Customer Name: ");
-        String customer = input.nextLine();
+        String customer = input.nextLine().trim();
 
         System.out.print("Product Name: ");
         String product = input.nextLine();
