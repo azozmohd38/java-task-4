@@ -117,6 +117,11 @@ public class ArrayDataAnalyzer {
         //  Update Array Values
         System.out.println("\n===== UPDATE ARRAY =====");
         System.out.print("Enter index (0-" + (numbers.length - 1) + "): ");
+        while (!input.hasNextInt()) {
+            System.out.println("Invalid index.");
+            input.next();
+            System.out.print("Enter index (0-" + (numbers.length - 1) + "): ");
+        }
         int index = input.nextInt();
 
         if (index >= 0 && index < numbers.length) {
