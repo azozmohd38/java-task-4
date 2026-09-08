@@ -125,7 +125,11 @@ public class LibraryBookManagement {
 
         boolean found = false;
 
-        for (int i = 0; i < bookTitles.size(); i++) {
+        if (searchTitle.isEmpty()) {
+            System.out.println("Book not found.");
+        }
+
+        for (int i = 0; i < bookTitles.size() && !searchTitle.isEmpty(); i++) {
             if (bookTitles.get(i).equalsIgnoreCase(searchTitle)) {
                 System.out.println("\nBook Found!");
                 System.out.println("Book Index: " + i);
