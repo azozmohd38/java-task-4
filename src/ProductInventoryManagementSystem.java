@@ -134,7 +134,7 @@ public class ProductInventoryManagementSystem {
         System.out.println("\n===== SEARCH PRODUCT =====");
 
         System.out.print("Enter Product Name: ");
-        String search = input.nextLine();
+        String search = input.nextLine().trim();
 
         int searchIndex = productNames.indexOf(search);
 
