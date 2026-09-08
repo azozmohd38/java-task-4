@@ -73,7 +73,7 @@ public class CustomerOrderManagement {
         input.nextLine();
 
         System.out.print("Status (Pending/Completed/Cancelled): ");
-        String status = input.nextLine();
+        String status = input.nextLine().trim();
 
         if (!(status.equalsIgnoreCase("Pending")
                 || status.equalsIgnoreCase("Completed")
