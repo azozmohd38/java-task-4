@@ -239,12 +239,13 @@ public class CustomerOrderManagement {
             double total = quantities.get(d) * prices.get(d);
             double discount = 0;
 
-            if (total >= 5000)
+            if (total >= 5000) {
                 discount = 0.15;
-            else if (total >= 2000)
+            } else if (total >= 2000) {
                 discount = 0.10;
-            else if (total >= 1000)
+            } else if (total >= 1000) {
                 discount = 0.05;
+            }
 
             double discountAmount = total * discount;
             double finalPrice = total - discountAmount;
