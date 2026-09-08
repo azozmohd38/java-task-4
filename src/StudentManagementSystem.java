@@ -37,7 +37,7 @@ public class StudentManagementSystem {
         System.out.println("\n===== ADD NEW STUDENTS =====");
 
         System.out.print("Enter student name to add at the end: ");
-        String newStudent = input.nextLine();
+        String newStudent = input.nextLine().trim();
         students.add(newStudent);
         System.out.println("Student added successfully.");
 
