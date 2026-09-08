@@ -50,7 +50,8 @@ public class CustomerOrderManagement {
 
         if (customer.isEmpty() || product.isEmpty()) {
             System.out.println("Customer and product names cannot be empty.");
-            input.close();
+            System.out.println("Order management completed.");
+        input.close();
             return;
         }
 
