@@ -441,7 +441,12 @@ public class BankTransactionManagementSystem {
                     customerNames.set(update, input.nextLine());
 
                     System.out.print("New Type: ");
-                    accountTypes.set(update, input.nextLine());
+                    String updatedType = input.nextLine().trim();
+                    if (updatedType.equalsIgnoreCase("Savings") || updatedType.equalsIgnoreCase("Current")) {
+                        accountTypes.set(update, updatedType);
+                    } else {
+                        System.out.println("Invalid Account Type.");
+                    }
 
                     System.out.print("New Status: ");
                     accountStatus.set(update, input.nextLine());
