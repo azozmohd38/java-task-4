@@ -168,7 +168,7 @@ public class CustomerOrderManagement {
 
             input.nextLine();
             System.out.print("Customer Name: ");
-            String name = input.nextLine();
+            String name = input.nextLine().trim();
 
             for (int i = 0; i < customerNames.size(); i++) {
 
