@@ -126,6 +126,11 @@ public class ArrayDataAnalyzer {
 
         if (index >= 0 && index < numbers.length) {
             System.out.print("Enter new value: ");
+            while (!input.hasNextInt()) {
+                System.out.println("Please enter a valid number.");
+                input.next();
+                System.out.print("Enter new value: ");
+            }
             int newValue = input.nextInt();
 
             numbers[index] = newValue;
