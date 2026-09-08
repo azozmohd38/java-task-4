@@ -133,8 +133,11 @@ public class ArrayDataAnalyzer {
             }
             int newValue = input.nextInt();
 
+            int oldValue = numbers[index];
             numbers[index] = newValue;
 
+            System.out.println("Old Value: " + oldValue);
+            System.out.println("New Value: " + newValue);
             System.out.println("Updated Array:");
             System.out.println(Arrays.toString(numbers));
     } else {
