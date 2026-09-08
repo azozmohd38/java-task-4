@@ -272,6 +272,11 @@ public class BankTransactionManagementSystem {
                     int senderIndex = accountNumbers.indexOf(sender);
                     int receiverIndex = accountNumbers.indexOf(receiver);
 
+                    if (sender == receiver) {
+                        System.out.println("Sender and receiver must be different accounts.");
+                        break;
+                    }
+
                     if (senderIndex == -1 || receiverIndex == -1) {
 
                         System.out.println("Account not found.");
