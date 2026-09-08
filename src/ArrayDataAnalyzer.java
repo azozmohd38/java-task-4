@@ -85,6 +85,11 @@ public class ArrayDataAnalyzer {
         //  Search System
         System.out.println("\n===== SEARCH SYSTEM =====");
         System.out.print("Enter number to search: ");
+        while (!input.hasNextInt()) {
+            System.out.println("Please enter a valid number.");
+            input.next();
+            System.out.print("Enter number to search: ");
+        }
         int search = input.nextInt();
 
         boolean found = false;
