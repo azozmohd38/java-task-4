@@ -46,11 +46,13 @@ public class ScoreAnalysisSystem {
         for (int score : scores) {
             total += score;
 
-            if (score > highest)
+            if (score > highest) {
                 highest = score;
+            }
 
-            if (score < lowest)
+            if (score < lowest) {
                 lowest = score;
+            }
     }
 
         double average = (double) total / scores.size();
