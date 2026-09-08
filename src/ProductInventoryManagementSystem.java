@@ -239,7 +239,7 @@ public class ProductInventoryManagementSystem {
             indexes.add(i);
         }
 
-        Collections.sort(indexes, Comparator.comparing(productPrices::get));
+        indexes.sort(Comparator.comparing(productPrices::get));
 
         for (int i : indexes) {
             System.out.println(productNames.get(i) + " | Qty: "
